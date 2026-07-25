@@ -84,6 +84,7 @@ terraform apply
 ## Submission
 
 - Terraform apply screenshot: `screenshots/terraform-apply.png`
+[App Config file](https://github.com/alexanderchosen/terraform_local_config_project/blob/main/screenshots/app_conf.png)
 - Terraform plan screenshot: `screenshots/terraform_plan.png`
 - Terraform app_config screenshot: `screenshots/terraform-plan.png`
 - My locals file screenshot: `screenshots/locals.tf.png`
