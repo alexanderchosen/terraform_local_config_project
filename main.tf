@@ -11,6 +11,12 @@ resource "random_password" "db_password"{
 resource "local_file" "db_password_file"{
     filename = "${path.module}/secrets/db_password.txt"
     content = random_password.db_password.result
+
+
+# to prevent terraform from recreating the content which contains the generated password silently after every terraform apply is executed
+    lifecycle {
+    ignore_changes = [content]
+  }
 }
 
 resource "random_integer" "random_numbers"{
@@ -30,6 +36,11 @@ resource "local_file" "deployment_report"{
     depends_on = [
         local_file.db_password_file
   ]
+
+# prevent destroy lifecycle rule is applied here to ensure that deployment report is not destroyed for historical data use.
+    lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "local_file" "app_config" {
