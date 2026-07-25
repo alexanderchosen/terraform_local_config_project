@@ -70,7 +70,7 @@ Locals exist because these values depend on resources that only get their real v
 | Multiple providers | `hashicorp/local` + `hashicorp/random` (`providers.tf`) |
 | Locals | `locals.tf` — `filename`, `user_id`, `app_name`, `db_name`, `db_user` |
 | Lifecycle rules | see relevant `resource` blocks in `main.tf` |
-| Data source | `data "local_file" "config_header"` (`data.tf`) |
+| Data source | `data "local_file" "page_footer"` (`data.tf`) |
 
 
 ## Usage
