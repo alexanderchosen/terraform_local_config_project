@@ -15,11 +15,6 @@ variable "username"{
 }
 
 
-variable "user_id"{
-    type = number
-    description = " This is the user's id"
-}
-
 variable "environment"{
     type = string
     description = "This tells the current working environment in use"
